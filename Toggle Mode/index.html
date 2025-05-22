@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #1f2937;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 40px;
+        }
+
+        .dark-mode h1 {
+            color: #93c5fd;
+        }
+
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        #toggle-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #toggle-button hover {
+            background-color: #1d4ed8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dark-mode .box {
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .dark-mode .box h2 {
+            color:aqua;
+        }
+
+        .box img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .box p {
+            text-align: justify;
+            font-family: "Georgia", serif;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI FIELDS WITH REAL EXAMPLES</h1>
+
+    <div class="toggle-container">
+        <button id="toggle-button">
+            <span id="theme-icon">🌙</span>Toggle Theme
+        </button>
+    </div>
+
+    <div class="grid">
+
+        <div class="box">
+            <h2>1. Machine Learning</h2>
+            <img src="Images/Netflix_Recommendation_System.jpg" alt="ML Example - Netflix Recommendations">
+            <p>
+                Machine Learning focuses on algorithms that learn from data. A well-known example is <strong>Netflix's
+                    Recommendation Engine</strong>, which analyzes user viewing history and patterns to suggest new
+                content. The system continuously learns and improves based on what users watch and rate.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>2. Deep Learning</h2>
+            <img src="Images/Autonomous_Example.jpg" alt="DL Example - Autonomous Vehicles">
+            <p>
+                Deep Learning involves neural networks with many layers and is ideal for complex problems like image and
+                speech recognition. <strong>Autonomous vehicles (e.g., Tesla)</strong> use deep learning for real-time
+                object detection, lane tracking, and decision-making on roads.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>3. Reinforcement Learning</h2>
+            <img src="Images/AlphaGo.jpeg" alt="RL Example - AlphaGo">
+            <p>
+                Reinforcement Learning enables agents to learn through trial and error using rewards. A powerful example
+                is <strong>DeepMind's AlphaGo</strong>, which beat world champions in the complex board game Go. It
+                learned optimal strategies by planning millions of games against itself.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>4. Natural Language Processing</h2>
+            <img src="Images/NLP_ChatGPT.jpg" alt="NLP Example - ChatGPT">
+            <p>
+                NLP allows computers to understand, interpret, and generate human language. <strong>ChatGPT</strong> is
+                a prime example, capable of understanding context, answering questions, translating languages, and even
+                writing content, making communication with machines more natural.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById("toggle-button");
+        const themeIcon = document.getElementById("theme-icon");
+
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") {
+            document.body.classList.add("dark-mode");
+            themeIcon.textContent = "☀️";
+        }
+
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                themeIcon.textContent = "☀️";
+                localStorage.setItem("theme", "dark");
+            }
+            else {
+                themeIcon.textContent = "🌙";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+</body>
+
+</html>
