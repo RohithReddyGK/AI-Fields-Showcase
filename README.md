@@ -1,5 +1,10 @@
 # 🤖 AI Fields Showcase
 
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![HTML](https://img.shields.io/badge/tech-HTML-orange)
+![CSS](https://img.shields.io/badge/tech-CSS-blue)
+![JavaScript](https://img.shields.io/badge/tech-JavaScript-yellow)
+
 A clean, interactive webpage presenting four major AI fields with real-world examples. Includes a smooth **dark/light theme toggle** powered by vanilla JavaScript for better user experience.
 
 ---
