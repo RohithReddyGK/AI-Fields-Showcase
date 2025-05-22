@@ -50,7 +50,15 @@ AI-Fields-Showcase/
 
 ---
 
-### 
+## 🖼️ Screenshots
+
+### 1️⃣ Light Mode
+<img src="https://github.com/user-attachments/assets/7447cfbe-21e8-46f6-8135-a26fd384d7d2" alt="Light Mode" width="700" height="450"/>
+
+### 2️⃣ Dark Mode
+<img src="https://github.com/user-attachments/assets/e864f382-efc3-4c35-a045-fd5e258a7b25" alt="Dark Mode" width="700" height="450"/>
+
+---
 
 ## 🙋‍♂️ Author
 
