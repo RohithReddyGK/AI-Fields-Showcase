@@ -63,6 +63,8 @@ AI-Fields-Showcase/
 ### Netlify Badge
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f5425c8-a6e7-4ca6-8512-3be05d940372/deploy-status)](https://app.netlify.com/projects/ai-fields-theme-toggle/deploys)
 
+---
+
 ## 🙋‍♂️ Author
 
 **Rohith Reddy.G.K**  
