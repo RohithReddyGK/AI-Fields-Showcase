@@ -36,6 +36,7 @@ No external libraries or frameworks used.
 
 ## 📂 Folder Structure
 
+```
 AI-Fields-Showcase/  
 ├── index.html  
 ├── Images/  
@@ -43,6 +44,7 @@ AI-Fields-Showcase/
 │   ├── Autonomous_Example.jpg  
 │   ├── AlphaGo.jpeg  
 │   └── NLP_ChatGPT.jpg  
+```
 
 ---
 
